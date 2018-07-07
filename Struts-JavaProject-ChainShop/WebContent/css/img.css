@@ -1,0 +1,69 @@
+        <style type="text/css">
+            #box {/*设置整个图片框的外观*/
+                margin: 50px auto 0px;
+                position: relative;
+                width: 320px;
+                height: 480px;
+                background: #B6C7E5;
+                border: 10px solid #C0C0C0;
+            }
+             
+            a {/*设置链接的样式*/
+                font-size: 20px;
+                line-height: 25px;
+                text-align: center;
+                text-decoration: none;
+                width: 25px;
+                height: 25px;
+                opacity: 0.8;
+                filter: alpha(opacity:80);
+                background: #fff;
+                color: #000;
+                top: 228px;
+            }
+             
+            a:hover {/*设置鼠标移动到链接上的样式*/
+                background: #FFFF00;
+                color: red;
+            }
+             
+            #next {/*后一张图片按钮的样式*/
+                position: absolute;
+                right: 10px;
+            }
+             
+            #prev {/*前一张图片按钮的样式*/
+                position: absolute;
+                left: 10px;
+            }
+             
+            #p1 {/*顶部页码显示的样式*/
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+             
+            .txt_style {/*文字的样式*/
+                text-align: center;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+                font-size: 15px;
+                background: #000;
+                color: #fff;
+                opacity: 0.7;
+                filter: alpha(opacity:70);
+            }
+             
+            #span1 {/*底部文字描述的样式*/
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+            }
+             
+            #img1 {/*图片的大小*/
+                width: 100%;
+                height: 100%;
+            }
+        </style>

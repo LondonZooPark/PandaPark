@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<package name="shop" namespace="/shop" extends="struts-default">
+		<action name="seller_login" class="action.SellerLoginAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">seller_loginsuccess</param>
+　　			</result>
+		</action>
+		
+		<action name="seller_regist" class="action.SellerRegistAction">
+			<result name="success">/shop_welcome.jsp</result>
+			<result name="error">/errorpage.jsp</result>
+		</action>
+		
+		<action name="seller_showcheckseller" class="action.GetwaitCheckAction">
+			<result name="success">/headquarters_adminShoper.jsp</result>
+		</action>
+		<action name="seller_approvalseller" class="action.ApprovalSellerAction">
+			<result name="success">/headquarters.jsp</result>
+		</action>
+		<action name="seller_loginsuccess" class="action.SellerLoginSuccessAction">
+			<result name="success">/shop_welcome_new.jsp</result>
+		</action>
+		<action name="seller_managegoods" class="action.SellerManageGoodsAction">
+			<result name="success">/goods_manage.jsp</result>
+		</action>
+		
+		
+		<action name="seller_uploadfile" class="action.FileUploadAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">seller_loginsuccess</param>
+　　			</result>
+		</action>
+		
+		
+		<action name="seller_update_goodsnum" class="action.SellerUpdateGoodsAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">seller_loginsuccess</param>
+　　			</result>
+		</action>
+		<action name="seller_add_goods" class="action.SellerAddGoodsAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">seller_loginsuccess</param>
+　　			</result>
+		</action>
+	</package>
+	
+	<package name="" namespace="" extends="struts-default">
+		<action name="user_login" class="action.User_LoginAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">user_loginsuccess</param>
+　　			</result>
+			<result name="login_error">/user_login_new.jsp</result>
+		</action>
+		<action name="user_regist" class="action.UserRegistAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">user_loginsuccess</param>
+　　			</result>
+			<result name="error">/errorpage.jsp</result>
+		</action>
+		<action name="user_loginsuccess" class="action.UserLoginSuccessAction">
+			<result name="success">/user_welcome_new.jsp</result>
+		</action>
+		<action name="user_intoshop" class="action.UserIntoShopAction">
+			<result name="success">/user_shoppage_new.jsp</result>
+		</action>
+		<action name="user_addshoppingcart" class="action.UserAddGoodsToCartAction">
+			<result name="success" type="redirectAction">
+　　　　			<param name="actionName">get_goods_by_page</param>
+　　			</result>
+		</action>
+		<action name="user_seeshoppingcart" class="action.UserSeeShopingCartAction">
+			<result name="success">/user_shoppingCart.jsp</result>
+		</action>
+		<action name="user_checkout" class="action.UserCheckOutAction">
+			<result name="success">/user_success_checkout.jsp</result>
+		</action>
+		<action name="user_creatorder" class="action.UserCreatOrderAction">
+			<result name="success">/user_paypage.jsp</result>
+		</action>
+		<action name="get_goods_by_page" class="action.GetGoodsByPageAction">
+			<result name="success">/user_shoppage_new_page.jsp</result>
+		</action>
+		<action name="get_goods_by_pageKeywords" class="action.UserSelectByKeywordsAction">
+			<result name="success">/user_shoppage_new_page.jsp</result>
+		</action>
+		<action name="seller_seeorder" class="action.SellerGetOrderAction">
+			<result name="success">/shop_manageOrder.jsp</result>
+		</action>
+		
+		<action name="seller_deliver" class="action.SellerDeliverGoodsAction">
+			<result name="success">/shop_suc_deliver.jsp</result>
+			<result name="error">/shop_err_deliver.jsp</result>
+		</action>
+		
+		<action name="seller_get_detail_order" class="action.SellerGetDetailOrderAction">
+			<result name="success">/shop_suc_detailorder.jsp</result>
+		</action>
+		
+		<action name="user_seeorder" class="action.UserGetOrderAction">
+			<result name="success">/user_manageOrder.jsp</result>
+		</action>
+		
+		<action name="user_get_detail_order" class="action.UserGetDetailOrderAction">
+			<result name="success">/user_suc_detailorder.jsp</result>
+		</action>
+		
+		<action name="user_rcvgoods" class="action.UserRcvGoodsAction">
+			<result name="success">/user_suc_rev.jsp</result>
+			<result name="error">/user_err_rev.jsp</result>
+		</action>
+	</package>
+</struts>
